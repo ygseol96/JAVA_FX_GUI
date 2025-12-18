@@ -1,0 +1,272 @@
+.root {
+    -fx-font-family: "Inter", "Apple SD Gothic Neo", "Malgun Gothic", "Segoe UI", sans-serif;
+    -fx-background-color: #0F1115;
+    -fx-text-fill: #D6D9E0;
+}
+
+/* 컨테이너 공통 */
+.container, .pane, .stack-pane, .anchor-pane, .border-pane, .grid-pane, .hbox, .vbox {
+    -fx-background-color: #0F1115;
+}
+
+/* ======== 텍스트 ======== */
+.label {
+    -fx-text-fill: #D6D9E0;
+}
+
+.text {
+    -fx-fill: #D6D9E0;
+}
+
+.caption, .subtle {
+    -fx-text-fill: #9EA6B3;
+}
+
+/* ======== 버튼 ======== */
+.button {
+    -fx-background-color: #202634;
+    -fx-text-fill: #D6D9E0;
+    -fx-background-radius: 8;
+    -fx-padding: 8 14;
+    -fx-border-color: #2F3646;
+    -fx-border-radius: 8;
+    -fx-border-width: 1;
+}
+
+.button:hover {
+    -fx-background-color: #262C3A;
+}
+
+.button:pressed {
+    -fx-background-color: #1A1F29;
+}
+
+.button:focused {
+    -fx-border-color: #4C8BF5;
+    -fx-border-width: 1.25;
+}
+
+.button:disabled {
+    -fx-opacity: 0.6;
+}
+
+/* 강조 버튼 */
+.button.primary {
+    -fx-background-color: #4C8BF5;
+    -fx-text-fill: white;
+    -fx-border-color: transparent;
+}
+
+.button.primary:hover {
+    -fx-background-color: #3E78E0;
+}
+
+.button.primary:pressed {
+    -fx-background-color: #356BD0;
+}
+
+/* ======== 입력 컨트롤 ======== */
+.text-field, .password-field, .text-area {
+    -fx-background-color: #141821, #141821;
+    -fx-text-fill: #D6D9E0;
+    -fx-prompt-text-fill: #9EA6B3;
+    -fx-background-radius: 8;
+    -fx-border-color: #2F3646;
+    -fx-border-radius: 8;
+    -fx-border-width: 1;
+}
+
+.text-field:focused, .password-field:focused, .text-area:focused {
+    -fx-border-color: #4C8BF5;
+}
+
+.text-area .content {
+    -fx-background-color: #141821;
+}
+
+/* ======== 체크박스 / 라디오 ======== */
+.check-box, .radio-button {
+    -fx-text-fill: #D6D9E0;
+}
+
+.check-box .box, .radio-button .radio {
+    -fx-background-color: #202634;
+    -fx-border-color: #2F3646;
+}
+
+.check-box:selected .mark, .radio-button:selected .dot {
+    -fx-background-color: #4C8BF5;
+}
+
+/* ======== 콤보박스 ======== */
+.combo-box {
+    -fx-background-color: #202634;
+    -fx-border-color: #2F3646;
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+    -fx-text-fill: #D6D9E0;
+}
+
+.combo-box:focused {
+    -fx-border-color: #4C8BF5;
+}
+
+.combo-box .list-cell {
+    -fx-background-color: transparent;
+    -fx-text-fill: #D6D9E0;
+}
+
+.combo-box-popup .list-view {
+    -fx-background-color: #141821;
+    -fx-control-inner-background: #141821;
+    -fx-border-color: #2F3646;
+}
+
+.combo-box-popup .list-cell:hover {
+    -fx-background-color: #202634;
+}
+
+/* ======== 토글 스위치(토글버튼) ======== */
+.toggle-button {
+    -fx-background-color: #202634;
+    -fx-text-fill: #D6D9E0;
+    -fx-background-radius: 16;
+    -fx-border-color: #2F3646;
+    -fx-border-radius: 16;
+}
+
+.toggle-button:selected {
+    -fx-background-color: #4C8BF5;
+    -fx-text-fill: white;
+    -fx-border-color: transparent;
+}
+
+/* ======== 리스트/테이블 ======== */
+.list-view, .tree-view, .table-view {
+    -fx-background-color: #141821;
+    -fx-control-inner-background: #141821;
+    -fx-text-fill: #D6D9E0;
+    -fx-border-color: #2F3646;
+}
+
+.table-row-cell, .list-cell, .tree-cell {
+    -fx-background-color: transparent;
+    -fx-text-fill: #D6D9E0;
+}
+
+.table-row-cell:odd {
+    -fx-background-color: #161A22;
+}
+
+.table-row-cell:selected, .list-cell:selected, .tree-cell:selected {
+    -fx-background-color: #202634;
+    -fx-text-fill: #D6D9E0;
+}
+
+.table-view .column-header-background {
+    -fx-background-color: #1A1F29;
+}
+
+.table-view .column-header, .table-view .filler {
+    -fx-background-color: transparent;
+    -fx-border-color: #2F3646;
+}
+
+/* ======== 탭 ======== */
+.tab-pane {
+    -fx-background-color: #0F1115;
+}
+
+.tab-pane .tab-header-area {
+    -fx-background-color: #141821;
+    -fx-border-color: #2F3646;
+}
+
+.tab-pane .tab {
+    -fx-background-color: transparent;
+    -fx-text-fill: #D6D9E0;
+    -fx-padding: 8 12;
+}
+
+.tab-pane .tab:selected {
+    -fx-background-color: #202634;
+    -fx-text-fill: #D6D9E0;
+}
+
+/* ======== 메뉴 ======== */
+.menu-bar {
+    -fx-background-color: #141821;
+    -fx-border-color: #2F3646;
+}
+
+.context-menu {
+    -fx-background-color: #141821;
+    -fx-border-color: #2F3646;
+}
+
+.menu-item {
+    -fx-text-fill: #D6D9E0;
+}
+
+.menu-item:focused {
+    -fx-background-color: #202634;
+}
+
+/* ======== 스크롤 ======== */
+.scroll-bar {
+    -fx-background-color: transparent;
+}
+
+.scroll-bar .thumb {
+    -fx-background-color: #2F3646;
+    -fx-background-radius: 8;
+}
+
+.scroll-bar .track {
+    -fx-background-color: #11151C;
+    -fx-background-radius: 8;
+}
+
+/* ======== 툴팁/알럿 ======== */
+.tooltip {
+    -fx-background-color: #202634;
+    -fx-text-fill: #D6D9E0;
+    -fx-border-color: #2F3646;
+    -fx-background-radius: 8;
+    -fx-border-radius: 8;
+}
+
+.dialog-pane {
+    -fx-background-color: #141821;
+    -fx-border-color: #2F3646;
+}
+
+.dialog-pane .button {
+    -fx-background-color: #202634;
+}
+
+/* ======== 상태 표시 ======== */
+.progress-bar, .progress-indicator {
+    -fx-accent: #4C8BF5;
+}
+
+.slider .track {
+    -fx-background-color: #2F3646;
+}
+
+.slider .thumb {
+    -fx-background-color: #4C8BF5;
+}
+
+/* ======== 에러/경고 상태 ======== */
+.error {
+    -FX-BORDER-COLOR: #D44A4A;
+}
+
+.warning {
+    -fx-border-color: #D4A64A;
+}
+
+.success {
+    -fx-border-color: #4AD46E;
+}
