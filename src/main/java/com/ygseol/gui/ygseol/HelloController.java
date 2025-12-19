@@ -1,10 +1,10 @@
 package com.ygseol.gui.ygseol;
 
+import javafx.concurrent.Task;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 
 import java.io.BufferedInputStream;
-import java.io.IOException;
 import java.net.HttpURLConnection;
 import java.net.URL;
 
@@ -34,16 +34,17 @@ public class HelloController {
         }
     }
 
-    private static HttpURLConnection getHttpURLConnection() throws IOException {
-        HttpURLConnection request = (HttpURLConnection) new URL("https://svc.niceapi.co.kr:22001/digital/niceid/oauth/oauth/token HTTP/1.1").openConnection();
-        request.setRequestProperty("Content-Type", "application/json");
-        request.setRequestMethod("POST");
-        request.setRequestProperty("Accept", "application/json");
-        request.setRequestProperty("Accept", "*/*");
-        request.setRequestProperty("Connection", "Keep-Alive");
-        request.setRequestProperty("Charset", "UTF-8");
-        return request;
+    private Task getDrugInfo() {
+        String drugUrl = ""
+
+                Task < String > httpTask = new Task<String>() {
+                    @Override
+                    protected String call() throws Exception {
+                        return "";
+                    }
+                };
     }
+
 
     @FXML
     protected void onHideButtonClick() {
