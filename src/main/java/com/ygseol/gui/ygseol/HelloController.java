@@ -1,12 +1,12 @@
 package com.ygseol.gui.ygseol;
 
-import javafx.concurrent.Task;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 
-import java.io.BufferedInputStream;
-import java.net.HttpURLConnection;
-import java.net.URL;
+import java.net.URI;
+import java.net.http.HttpClient;
+import java.net.http.HttpRequest;
+import java.net.http.HttpResponse;
 
 public class HelloController {
     @FXML
@@ -15,34 +15,16 @@ public class HelloController {
     @FXML
     protected void onShowButtonClick() {
         try {
-
-            URL url = new URL("http://localhost:8080/ygseol");
-            if (welcomeText.getText().equals("Hello World!")) {
-                welcomeText.setText("Hello!");
-                HttpURLConnection request = getHttpURLConnection();
-                BufferedInputStream out = new BufferedInputStream(request.getInputStream());
-
-                System.out.println(out);
-
-
-            } else {
-                welcomeText.setText("Hello World!");
-
-            }
+            // http://openapi.foodsafetykorea.go.kr/api/8e44d4748d1f4dcc9205/10760/json/시작/끝인덱스/
+            HttpClient client = HttpClient.newHttpClient(); //HTTP 프로토콜 요청하는 인스턴스 생성
+            URI url = new URI("http://openapi.foodsafetykorea.go.kr/api/8e44d4748d1f4dcc9205/I0760/json/1/5"); //API 규격에 맞게 파라미터 전송.
+            HttpRequest request = HttpRequest.newBuilder().GET().uri(url).build(); //빌더형식으로 속성값 지정.
+            HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString()); //응답객체를 별도로 만들어. 클라이언트 객체와함께 요청객체를 적재하여 요청 및 응답
+            System.out.println(response);
+            welcomeText.setText(response.body());
         } catch (Exception e) {
             e.printStackTrace();
         }
-    }
-
-    private Task getDrugInfo() {
-        String drugUrl = ""
-
-                Task < String > httpTask = new Task<String>() {
-                    @Override
-                    protected String call() throws Exception {
-                        return "";
-                    }
-                };
     }
 
 
