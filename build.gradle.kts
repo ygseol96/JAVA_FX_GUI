@@ -38,6 +38,8 @@ javafx {
 dependencies {
     implementation("org.controlsfx:controlsfx:11.2.1")
     implementation("org.kordamp.bootstrapfx:bootstrapfx-core:0.4.0")
+    compileOnly("org.projectlombok:lombok:1.18.32")
+    annotationProcessor("org.projectlombok:lombok:1.18.32")
     testImplementation("org.junit.jupiter:junit-jupiter-api:${junitVersion}")
     testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:${junitVersion}")
 }
