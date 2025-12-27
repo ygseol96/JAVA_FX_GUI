@@ -1,21 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.*?>
-<?import javafx.scene.layout.BorderPane?>
-<BorderPane fx:id="borderPane" xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.ygseol.gui.ygseol.controller.HelloController">
+<?import javafx.scene.layout.*?>
+
+<BorderPane fx:id="borderPane" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.ygseol.gui.ygseol.controller.HelloController">
     <top>
-        <MenuBar BorderPane.alignment="TOP_CENTER">
+        <MenuBar nodeOrientation="LEFT_TO_RIGHT" BorderPane.alignment="TOP_CENTER">
             <Menu text="설정">
                 <items>
-                    <MenuItem text="만든이"></MenuItem>
+                    <MenuItem text="만든이" />
                 </items>
             </Menu>
         </MenuBar>
     </top>
     <center>
-        <Label fx:id="welcomeText"/>
-        <Button text="토글" onAction="#onShowButtonClick"/>
+        <Label fx:id="welcomeText" />
+        <Button onAction="#onShowButtonClick" text="토글" />
     </center>
 </BorderPane>

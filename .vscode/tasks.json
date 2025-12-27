@@ -1,0 +1,44 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "gradle",
+			"id": "c:\\Users\\ygseol\\gui\\ygseolcleanygseol",
+			"script": "clean",
+			"description": "Deletes the build directory.",
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"project": "ygseol",
+			"buildFile": "C:\\Users\\ygseol\\gui\\ygseol\\build.gradle.kts",
+			"rootProject": "ygseol",
+			"projectFolder": "c:\\Users\\ygseol\\gui\\ygseol",
+			"workspaceFolder": "c:\\Users\\ygseol\\gui\\ygseol",
+			"args": "",
+			"javaDebug": false,
+			"problemMatcher": [
+				"$gradle"
+			],
+			"label": "gradle: clean"
+		},
+		{
+			"type": "gradle",
+			"id": "c:\\Users\\ygseol\\gui\\ygseolbuildygseol",
+			"script": "build",
+			"description": "Assembles and tests this project.",
+			"group": "build",
+			"project": "ygseol",
+			"buildFile": "C:\\Users\\ygseol\\gui\\ygseol\\build.gradle.kts",
+			"rootProject": "ygseol",
+			"projectFolder": "c:\\Users\\ygseol\\gui\\ygseol",
+			"workspaceFolder": "c:\\Users\\ygseol\\gui\\ygseol",
+			"args": "",
+			"javaDebug": false,
+			"problemMatcher": [
+				"$gradle"
+			],
+			"label": "gradle: build"
+		}
+	]
+}
